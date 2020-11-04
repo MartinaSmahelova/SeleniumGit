@@ -56,6 +56,18 @@ public class Main {
         
         Thread.sleep(2000);
 
+        String title = firefox.getTitle();
+        Integer titleLenght = firefox.getTitle().length();
+        System.out.println("Titul stránky je: " + title + " a jeho délka je: " + titleLenght + " znaků");
+
+
+        String url = firefox.getCurrentUrl();
+        System.out.println("url stránky je: "+ url);
+
+        String pageSource = firefox.getPageSource();
+        Integer pageSourceLength = firefox.getPageSource().length();
+        System.out.println("Zdrojový kód stránky: " + pageSource + " délka zdrojového kódu je: " + pageSourceLength + " znaků");
+
         firefox.quit();
     }
 }
